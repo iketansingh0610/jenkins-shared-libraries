@@ -3,6 +3,7 @@ withCredentials([usernamePassword(credentialsId: 'docker-hub-cred', passwordVari
         sh 'echo "$dockerHubPass" | docker login -u "$dockerHubUser" --password-stdin'
         sh 'docker image tag notes-app:latest iketansingh0610/notes-app:latest'
         sh 'docker push iketansingh0610/notes-app:latest'
+     }
 }
 
   
